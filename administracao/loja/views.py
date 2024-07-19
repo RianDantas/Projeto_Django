@@ -5,6 +5,11 @@ from .models import Produto
 # Create your views here.
 
 def pesquisar(request):
+
+    if request.method == 'POST':
+        print("METODO POST")
+
+    
     produto = Produto.objects.all()
     return render(request,'loja/pesquisar.html',{'produto': produto})
     #return HttpResponse(produto)

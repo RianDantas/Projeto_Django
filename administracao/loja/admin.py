@@ -3,4 +3,7 @@ from .models import Produto
 
 # Register your models here.
 
-admin.site.register(Produto)
+class ProdutoAdmin(admin.ModelAdmin):
+    list_display = ("nome", "preco")
+
+admin.site.register(Produto, ProdutoAdmin)

@@ -8,6 +8,14 @@
 <body>
     oi
 
+    <form action ="/loja/pesquisar/"    method="POST">
+        {% csrf_token %}
+        <label for="pesquisa">Pesquisar</label>
+        <input type="text"  name="pesquisa" id="pesquisa">
+        <input type="submit" value="Enviar">
+
+    </form>
+
     {% for i in produto %}
 
         <p>{{i.nome}}</p>
